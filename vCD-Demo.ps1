@@ -14,7 +14,7 @@ Get-RubrikSnapshot -id 'VcdVapp:::01234567-8910-1abc-d435-0abc1234d567'
 Export-RubrikVApp -id 'VcdVapp:::01234567-8910-1abc-d435-0abc1234d567' -snapshotid '7acdf6cd-2c9f-4661-bd29-b67d86ace70b' -ExportMode 'ExportToNewVapp' -NoMapping -PowerOn:$true
 # This exports the vApp snapshot with an id of 7acdf6cd-2c9f-4661-bd29-b67d86ace70b to a new vApp in the same Org VDC and remove existing network mappings from VM NICs
 
-.EXAMPLE
+# EXAMPLE
 $vapp = Get-RubrikVApp -Name 'vApp01' -PrimaryClusterID local 
 $snapshot = Get-RubrikSnapshot -id $vapp.id -Latest
 $restorableVms = $vapp.vms

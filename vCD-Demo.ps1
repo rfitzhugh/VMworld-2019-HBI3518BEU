@@ -8,6 +8,9 @@ Get-RubrikVCD -Status 'Connected'
 Get-RubrikVApp -Name 'vApp01'
 # This returns details on all vCD vApps named "vApp01".
 
+Get-RubrikVApp "vApp1" | Protect-RubrikVApp -SLA 'Gold'
+# This will assign the Gold SLA Domain to any vApp named "vApp1"
+
 Get-RubrikSnapshot -id 'VcdVapp:::01234567-8910-1abc-d435-0abc1234d567'
 # This will return all snapshot (backup) data for the virtual machine id of "VirtualMachine:::aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee-vm-12345"
 

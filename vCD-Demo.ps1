@@ -14,7 +14,7 @@ Get-RubrikVApp -Name 'Demo-vApp01' -PrimaryClusterID local
 Get-RubrikVApp "Demo-vApp01" -PrimaryClusterID local | Protect-RubrikVApp -SLA 'Gold'
 # This will assign the Gold SLA Domain to any vApp named "vApp1"
 
-Get-RubrikSnapshot -id 'VcdVapp:::01234567-8910-1abc-d435-0abc1234d567'
+Get-RubrikSnapshot -id 'VcdVapp:::01234567-8910-1abc-d435-0abc1234d567' 
 # This will return all snapshot (backup) data for the virtual machine id of "VirtualMachine:::aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee-vm-12345"
 
 Export-RubrikVApp -id 'VcdVapp:::01234567-8910-1abc-d435-0abc1234d567' -snapshotid '7acdf6cd-2c9f-4661-bd29-b67d86ace70b' -ExportMode 'ExportToNewVapp' -NoMapping -PowerOn:$true

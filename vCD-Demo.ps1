@@ -8,11 +8,11 @@ Connect-Rubrik -Server 192.168.150.121 -Username rebecca@rubrik.us
 Get-RubrikVCD -Status 'Connected'
 # This returns the vCD settings on the currently connected Rubrik cluster with the status of 'Connected'
 
+Get-RubrikVApp "demo-lin" -PrimaryClusterID local | Protect-RubrikVApp -SLA 'Gold'
+# This will assign the Gold SLA Domain to any vApp named "vApp1"
+
 Get-RubrikVApp -Name 'Demo-vApp01' -PrimaryClusterID local
 # This returns details on all vCD vApps named "vApp01".
-
-Get-RubrikVApp "Demo-vApp01" -PrimaryClusterID local | Protect-RubrikVApp -SLA 'Gold'
-# This will assign the Gold SLA Domain to any vApp named "vApp1"
 
 Get-RubrikSnapshot -id 'VcdVapp:::01234567-8910-1abc-d435-0abc1234d567' 
 # This will return all snapshot (backup) data for the virtual machine id of "VirtualMachine:::aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee-vm-12345"

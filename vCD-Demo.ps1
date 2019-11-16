@@ -8,7 +8,7 @@ Connect-Rubrik -Server 0.0.0.0 -Username rebecca@rubrik.us
 Get-RubrikVCD -Status 'Connected'
 # This returns the vCD settings on the currently connected Rubrik cluster with the status of 'Connected'
 
-Get-RubrikVApp "demo-lin" -PrimaryClusterID local | Protect-RubrikVApp -SLA 'VMworld-Demo'
+Get-RubrikVApp "demo-lin" -PrimaryClusterID local | Protect-RubrikVApp -SLA 'Demo-12H-R07-A30_AWS_USW2'
 # This will assign the VMworld Demo SLA Domain to any vApp named "demo-lin"
 
 Get-RubrikVApp "demo-lin" -PrimaryClusterID local | New-RubrikSnapshot -SLA 'Maint-12H-R07'

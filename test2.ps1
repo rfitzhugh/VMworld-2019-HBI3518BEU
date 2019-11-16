@@ -1,0 +1,2 @@
+$SnapshotID = (Get-RubrikVApp -Name 'CentOS7_min' | Get-RubrikSnapshot -Latest).id
+Export-RubrikVcdTemplate -id $SnapshotID -catalogid 'VcdCatalog:::149b3651-18d6-46ba-9687-71606adae52a' -orgvdcid 'VcdOrgVdc:::03b4c110-2d14-437f-a2b3-9458741ab20d' -Name 'CentosNew' -Verbose
